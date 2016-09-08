@@ -1,41 +1,27 @@
-var rappers = [{id:'icecube', img:'img/icecube.jpg'}, 
-{id:'img/jayz.jpg'}, 
-{id:'img/kanyewest.jpg'},
- {id:'img/pimpc.jpg'} ];
+$(document).ready(function(){
 
- console.log(rappers);
+var rappers = {
+'Ice Cube': {name: 'Ice Cube', imageUrl: 'assets/images/icecube.jpg'},
+'Jay-Z': {name:'Jay-Z', imageUrl: 'assets/images/jayz.ipg'},
+'Kanye West':{name: 'Kanye West', imageUrl: 'assets/images/kanyewest.jpg'},
+'Pimp C':{name:'Pimp C', imageUrl: 'assets/imagespimpc'}
 
-// function buildRappers(){
-// 	for (var i = 0; i < rappers.length; i++) {
-// 		var currentRappers = rappers[i];
-// 		&('#rappers').append();
-// 	}
+};
 
-//}
+var buildRappers = function(rappers) {
+	var rappersDiv = $("<div class='rappers data-name='" + rappers.name + "'>");
+	 var rappersName = $("<div class='rappers-name'>").text(rappers.name);
+	var rappersImage = $("<img alt= image' class='rappers-image'>").attr("src", rappers.imageUrl);
+	rappersDiv.append(rappersName).append(rappersImage);
 
-//buildRappers();
-
-
-
-//function buildCharacters(){
-//		for (var i = 0; i < rappers.length; i++1) {
-//			var currentRappers = rappers[i];
-//		$('#rappers').append('<div id=' + currentRappers.id + '></div>')
-//	}
-//}
-	
-
-
-//buildCharacters();
+}
 
 
 
 
 
 
-
-
-
+});
 
 
 
